@@ -1,0 +1,128 @@
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="img/favicon/favicon-32x32.png">
+    <link rel="stylesheet" href="css/style.bundle.css">
+
+    <title>SCORUM | delegate power</title>
+  </head>
+  <body>
+    <!-- Image and text -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="./index.html">
+        <img src="img/logo.png" height="30" class="d-inline-block align-top" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Operations
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+           
+                
+                <a class="dropdown-item" href="./delegate-power.html">Delegate power</a>
+                <a class="dropdown-item" href="./transfer.html">Transfer</a>
+                <div class="dropdown-divider"></div>
+         
+              </div>
+            </li>
+       
+          </ul>
+        </div>
+    </nav>
+
+
+<div class="container" id="delegate-power-page">
+  <div class="row">
+    <div class="col">
+      <h1>Delegate Power</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 form-group">
+      <div>
+        <label for="your-name">Delegate From:</label>
+        <input type="text" name="from-name" class="from-name form-control" placeholder="Username ..." style="width: 100%;">
+      </div>
+      <div class="from-values">
+        <p class="my-sp"><b>Active SP: </b><span class="value"></span></p>
+        <p class="delegated-sp"><b>Delegated SP: </b><span class="value"></span></p>
+      </div>
+    </div>
+    <div class="col-4 form-group">
+      <div>
+        <label for="your-name">Delegate To:</label>
+        <input type="text" name="to-name" class="to-name form-control" placeholder="Username ..." style="width: 100%;">
+      </div>
+        <div class="to-values">
+          <p class="my-sp"><b>Active: </b><span class="value"></span></p>
+          <p class="received-sp"><b>Received: </b><span class="value"></span></p>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 form-group scorum-power">
+      <label for="your-name">Scorum Power:</label>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">SP</span>
+        </div>
+        <input class="form-control amount-sp" id="scorum-power" aria-label="VestingShares">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="col form-group">
+    <!-- <button class="btn btn-primary generate-transaction delegate-btn">Generate transaction</button> -->
+  </div>
+</div>
+
+  <div class="row">
+  <div class="col form-group">
+    <p>
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#sign-and-broadcast" aria-expanded="false" aria-controls="sign-and-broadcast">
+        Delegate ScorumPower
+      </button>
+    </p>
+    <div class="collapse" id="sign-and-broadcast">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-6 form-group">
+            <label for="private-key">Private Key</label>
+            <input type="password" name="private-key" class="form-control private-key" placeholder="Your Private key" style="width: 100%;" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group">
+            <button type="button" class="btn btn-warning btn-broadcast">DELEGATE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <hr />
+  <div class="row">
+    <div class="col-7 form-group">
+      <label for="output">Transaction</label>
+      <textarea name="output" style="height:200px;width:100%;color:black;" class="output form-control"></textarea>
+    </div>
+  </div>
+</div>
+
+<script src="js/scorum.min.js" defer></script>
+<script src="js/bundle.js" defer></script>
+</body>
+</html>
+

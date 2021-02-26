@@ -1,0 +1,132 @@
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="img/favicon/favicon-32x32.png">
+    <link rel="stylesheet" href="css/style.bundle.css">
+
+    <title>SCORUM | delegate power</title>
+  </head>
+  <body>
+    <!-- Image and text -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="./index.html">
+        <img src="img/logo.png" height="30" class="d-inline-block align-top" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Operations
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./delegate-power.html">Delegate power</a>
+                <a class="dropdown-item" href="./transfer.html">Transfer</a>
+                <div class="dropdown-divider"></div>
+
+              </div>
+            </li>
+
+    </nav>
+
+
+<div class="container" id="transfer-scr-page">
+  <div class="row">
+    <div class="col">
+      <h1>Transfer SCR</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-8 form-group">
+      <div>
+        <label for="your-name">From:</label>
+        <input type="text" name="send-from-name" class="send-from-name form-control" placeholder="Username ..." style="width: 100%;">
+      </div>
+      <div class="from-values">
+        <p class="my-scr"><b>Balance: </b><span class="value"></span></p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-8 form-group">
+      <div>
+        <label for="to-name">To:</label>
+      </div>
+      <div>
+        <button type="button" class="btn btn-primary btn-import-modal" data-toggle="modal" data-target="#importModal">import receivers</button>
+      </div>
+    </div>
+  </div>
+  <div class="imported-receivers">
+  </div>
+
+  <hr />
+
+  <div class="row">
+  <div class="col form-group">
+    <p>
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#sign-and-broadcast" aria-expanded="false" aria-controls="sign-and-broadcast">
+        Transfer SCR
+      </button>
+    </p>
+    <div class="collapse" id="sign-and-broadcast">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-6 form-group">
+            <label for="private-key">Private Key</label>
+            <input type="password" name="private-key" class="form-control private-key" placeholder="Your Private key" style="width: 100%;" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group">
+            <button type="button" class="btn btn-warning btn-broadcast">Send SCR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="modal fade" id="importModal" tabindex="-1" role="dialog" aria-labelledby="importModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Import receivers</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-info" role="alert">
+              <div><b>CSV Format:</b></div>
+              <div><i>username, 5.3</i></div>
+              <div><i>username2, 3.1</i></div>
+            </div>
+            <form>
+              <div class="form-group">
+                <label for="import-data">Data:</label>
+                <textarea class="form-control" id="import-data" rows="10"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary transfer-import-btn">Import</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script src="js/scorum.min.js" defer></script>
+<script src="js/bundle.js" defer></script>
+</body>
+</html>
+
